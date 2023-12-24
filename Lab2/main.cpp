@@ -1,5 +1,6 @@
-п»ї#include <iostream>
+#include <iostream>
 #include <ctime>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -7,12 +8,12 @@ int main()
     setlocale(LC_ALL, "Russian");
 
 
-    // РћРґРЅРѕРјРµСЂРЅС‹Рµ РјР°СЃСЃРёРІС‹
+    // Одномерные массивы
 
-    // Р·Р°РґР°РЅРёРµ в„– 1
+    // задание № 1
     int mass[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-    cout << "РњР°СЃСЃРёРІ: [";
+    cout << "Массив: [";
     for(int a = 0; a < 10; a++)
     {
 
@@ -25,52 +26,53 @@ int main()
 
 
 
-    // Р·Р°РґР°РЅРёРµ в„– 2
-    int mass[10];
+    // задание № 2
+
+    int mass2[10];
 
     srand(time(0));
     for (int a = 0; a < 10; a++) {
 
-        mass[i] = rand() % 21 - 10;
+        mass2[a] = rand() % 21 - 10;
     }
 
 
-    cout << "Р­Р»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°: ";
+    cout << "Элементы массива: ";
 
     for (int a = 0; a < 10; a++) {
-        cout << mass[a] << " ";
+        cout << mass2[a] << " ";
     }
 
 
 
-  // Р·Р°РґР°РЅРёРµ в„– 3
-    int mass[5];
+  // задание № 3
+    int mass3[5];
 
     for (int a = 0; a < 5; a++)
     {
-        cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР° " << a+1 << ": ";
-        cin >> mass[a];
+        cout << "Введите элемент массива " << a+1 << ": ";
+        cin >> mass3[a];
     }
 
-    cout << "РњР°СЃСЃРёРІ: [ ";
-    for (int a = 0; a < 5; i++)
-        cout << mass[a] << " ";
+    cout << "Массив: [ ";
+    for (int a = 0; a < 5; a++)
+        cout << mass3[a] << " ";
     cout << "]" << endl;
 
 
 
-   // Р·Р°РґР°РЅРёРµ в„– 4
-    int mass[10];
+   // задание № 4
+    int mass4[10];
 
    srand(time(0));
     for (int a = 0; a < 10; a++) {
-        mass[a] = rand() % 21 - 10;
+        mass4[a] = rand() % 21 - 10;
     }
 
 
-    cout << "РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ: [";
+    cout << "Исходный массив: [";
     for (int a = 0; a < 10; a++) {
-        cout << mass[a] << " ";
+        cout << mass4[a] << " ";
     }
 
     cout << "]" << endl;
@@ -78,26 +80,26 @@ int main()
 
     for (int a = 0; a < 10; a++)
     {
-        if (mass[a]%2 == 0)
+        if (mass4[a]%2 == 0)
 
-            mass[a] *= 3;
+            mass4[a] *= 3;
         else
 
-            mass[a] *= 5;
+            mass4[a] *= 5;
     }
 
 
-    cout << "РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ: [";
+    cout << "Преобразованный массив: [";
     for (int i = 0; i < 10; i++)
-        cout << mass[i] << " ";
+        cout << mass4[i] << " ";
     cout << "]" << endl;
-    */
 
 
-    // РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
 
-    // Р·Р°РґР°РЅРёРµ в„– 1
-    int mass[5][5];
+    // двумерный массив
+
+    // задание № 1
+    int mass5[5][5];
 
     srand(time(0));
 
@@ -105,7 +107,7 @@ int main()
     {
         for (int a = 0; a < 5; a++)
         {
-            mass[b][a] = rand()%21 - 10;
+            mass5[b][a] = rand()%21 - 10;
         }
     }
 
@@ -113,15 +115,15 @@ int main()
     {
         for (int a = 0; a < 5; a++)
         {
-            cout << mass[a][a] << "\t";
+            cout << setw(5) << mass5[a][a] << "\t";
         }
         cout << endl;
     }
 
 
 
-    // Р·Р°РґР°РЅРёРµ в„– 2
-    int mass[5][5];
+    // задание № 2
+    int mass6[5][5];
 
     srand(time(0));
 
@@ -129,7 +131,7 @@ int main()
     {
         for (int j = 0; j < 5; j++)
         {
-            mass[i][j] = rand()%21 - 10;
+            mass6[i][j] = rand()%21 - 10;
         }
     }
 
@@ -137,26 +139,26 @@ int main()
     {
         for (int j = 0; j < 5; j++)
         {
-            cout << mass[i][j] << "\t";
+            cout << mass6[i][j] << "\t";
         }
         cout << endl;
     }
 
-    cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РІ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРµ:" << endl;
+    cout << "Сумма элементов в каждой строке:" << endl;
     for (int i = 0; i < 5; i++)
     {
         int sum = 0;
         for (int j = 0; j < 5; j++)
         {
-            sum += mass[i][j];
+            sum += mass6[i][j];
         }
-        cout << "РЎС‚СЂРѕРєР° " << i + 1 << ": " << sum << endl;
+        cout << "Строка " << i + 1 << ": " << sum << endl;
     }
 
 
 
-    // Р·Р°РґР°РЅРёРµ в„– 3
-    int mass[5][5];
+    // задание № 3
+    int mass7[5][5];
 
     srand(time(0));
 
@@ -164,16 +166,16 @@ int main()
     {
         for (int j = 0; j < 5; j++)
         {
-            mass[i][j] = rand()%21 - 10;
+            mass7[i][j] = rand()%21 - 10;
         }
     }
 
-    cout << "РСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ:" << endl;
+    cout << "Исходный массив:" << endl;
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
         {
-            cout << mass[i][j] << "\t";
+            cout << mass7[i][j] << "\t";
         }
         cout << endl;
     }
@@ -182,23 +184,23 @@ int main()
     {
         for (int j = 0; j < 5; j++)
         {
-            if(mass[i][j] < 0)
-                mass[i][j] = 0;
+            if(mass7[i][j] < 0)
+                mass7[i][j] = 0;
         }
     }
 
     cout << endl;
 
-    cout << "РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅС‹Р№ РјР°СЃСЃРёРІ:" << endl;
+    cout << "Преобразованный массив:" << endl;
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
         {
-            cout << mass[i][j] << "\t";
+            cout << mass7[i][j] << "\t";
         }
         cout << endl;
     }
-    */
+
 
     return 0;
 }
